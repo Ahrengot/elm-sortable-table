@@ -77,11 +77,11 @@ yachts to be sorted by length by default, you might say:
 
     import Table
 
-    Table.initialSort "Length"
+    Table.initialSort "Length" True
 -}
-initialSort : String -> State
-initialSort header =
-  State header False
+initialSort : String -> Bool -> State
+initialSort header isDecreasing =
+    State header isDecreasing
 
 
 
